@@ -1,7 +1,7 @@
 version: "3"
 services:
 
-  {{model_id}}_cpu:
+  {{stac.id}}_cpu:
     image: {{repository_name}}:1
     volumes:
       - "${INPUT_DATA}:/tf/data/input"
@@ -10,7 +10,7 @@ services:
       - INPUT_DATA=/tf/data/input
       - OUTPUT_DATA=/tf/data/output
 
-  {{model_id}}_gpu:
+  {{stac.id}}_gpu:
     image: {{repository_name}}:1-gpu
     runtime: nvidia
     environment:

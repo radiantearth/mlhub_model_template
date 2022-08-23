@@ -2,8 +2,9 @@
 
 :construction: This is a template git repository for a ml-model
 to be published on mlhub.earth. Create a repository using this template, named
-as the model id, without the version suffix for example model id
-`model_unet_agri_western_cape_v1` would use:
+as the model id, without the version suffix. 
+
+For example model id `model_unet_agri_western_cape_v1` would use:
 
 * Github repository name for publishing: `model_unet_agri_western_cape`, release to be tagged as `v1`.
 * Github repository name for internal development (if needed): `model_unet_agri_western_cape_dev`.
@@ -123,9 +124,9 @@ docker build -t radiantearth/{{repository_name}}:1-gpu -f Dockerfile_gpu .
 
     ```bash
     # no GPU
-    docker compose up {{model_id}}_cpu
+    docker compose up {{stac.id}}_cpu
     # NVIDIA GPU driver
-    docker compose up {{model_id}}_gpu
+    docker compose up {{stac.id}}_gpu
     ```
 
 4. Wait for the `docker compose` to finish running, then inspect the
