@@ -16,7 +16,7 @@ If this model was based on a dataset which is already published to MLHub, enter 
 
 }}
 
-# Citation
+## Citation
 
 {{
 
@@ -114,11 +114,11 @@ The recommended start/end date of imagery for new inferencing. Example:
 The learning approach used to train the model. It is recommended that you use
 one of the values below, but other values are allowed.
 
-Supervised
-Unsupervised
-Semi-supervised
-Reinforcement-learning
-Other
+* Supervised
+* Unsupervised
+* Semi-supervised
+* Reinforcement-learning
+* Other (explain)
 
 }}
 
@@ -129,11 +129,11 @@ Other
 The type of prediction that the model makes. It is recommended that you use one
 of the values below, but other values are allowed.
 
-Object-detection
-Classification
-Segmentation
-Regression
-Other
+* Object-detection
+* Classification
+* Segmentation
+* Regression
+* Other (explain)
 
 }}
 
@@ -141,8 +141,8 @@ Other
 
 {{
 
-Identifies the architecture employed by the model. This may be any string
-identifier, but publishers are encouraged to use well-known identifiers
+Identifies the architecture employed by the model. This may include any string
+identifiers, but publishers are encouraged to use well-known identifiers
 whenever possible. More details than just “it’s a CNN”!
 
 }}
@@ -153,11 +153,11 @@ whenever possible. More details than just “it’s a CNN”!
 
 Identifies the operating system on which the model was trained.
 
-Linux
-Windows (win32)
-Windows (cygwin)
-MacOS (darwin)
-Other
+* Linux
+* Windows (win32)
+* Windows (cygwin)
+* MacOS (darwin)
+* Other (explain)
 
 }}
 
@@ -166,8 +166,9 @@ Other
 {{
 
 The type of processor used during training. Must be one of "cpu" or "gpu".
-cpu
-gpu
+
+* cpu
+* gpu
 
 }}
 
