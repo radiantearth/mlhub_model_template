@@ -120,6 +120,15 @@ one of the values below, but other values are allowed.
 * Reinforcement-learning
 * Other (explain)
 
+Explain training steps such as augmentations and preprocessing used on image
+before training.
+
+A graphical representation of the model architecture within the documentation
+could be helpful to individuals or organizations who would wish to replicate
+workflow and reproduce same or even similar benchmark model results as well
+make specific changes within the architecture in an attempt to further improve
+it.
+
 }}
 
 ## Prediction Type
