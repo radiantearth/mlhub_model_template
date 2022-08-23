@@ -29,8 +29,7 @@ MLHub model id: `{{stac.id}}`. Browse on [Radiant MLHub](https://mlhub.earth/mod
 Please review the model architecture, license, applicable spatial and temporal extents
 and other details in the [model documentation](/docs/index.md).
 
-
-## System requirements
+## System Requirements
 
 * Git client
 * [Docker](https://www.docker.com/) with
@@ -43,7 +42,9 @@ and other details in the [model documentation](/docs/index.md).
 |{{int}}GB RAM | {{int}}GB RAM|
 |           | NVIDIA GPU |
 
-## Clone this model repository to get started
+## Get Started With Inferencing
+
+First clone this Git repository.
 
 {{
 
@@ -69,7 +70,7 @@ cd {{repository_name}}/
 After cloning the model repository, you can use the Docker Compose runtime files
 as described below.
 
-## Pull or build the Docker image
+## Pull or Build the Docker Image
 
 Pull pre-built image from Docker Hub (recommended):
 
@@ -91,7 +92,7 @@ docker build -t radiantearth/{{repository_name}}:1-gpu -f Dockerfile_gpu .
 
 ```
 
-## Run model to generate new inferences
+## Run Model to Generate New Inferences
 
 1. Prepare your input and output data folders. The `data/` folder in this repository
     has placeholder files and directory.
@@ -132,7 +133,7 @@ docker build -t radiantearth/{{repository_name}}:1-gpu -f Dockerfile_gpu .
 4. Wait for the `docker compose` to finish running, then inspect the
 `OUTPUT_DATA` folder for results.
 
-## Understanding output data
+## Understanding Output Data
 
 Please review the model output format and other technical details in the [model
 documentation](/docs/index.md).
