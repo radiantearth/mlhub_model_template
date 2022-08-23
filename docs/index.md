@@ -106,7 +106,6 @@ The recommended start/end date of imagery for new inferencing. Example:
 
 }}
 
-
 ## Learning Approach
 
 {{
@@ -181,12 +180,12 @@ The type of processor used during training. Must be one of "cpu" or "gpu".
 
 }}
 
-## Model inferencing
+## Model Inferencing
 
 Review the [GitHub repository README](../README.md) to get started running
 this model for new inferencing.
 
-## Structure of output data
+## Structure of Output Data
 
 {{
 
