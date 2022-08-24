@@ -1,0 +1,26 @@
+# Dockerfile for image tagged {{repository_name}}:1-gpu
+
+FROM tensorflow/tensorflow:2.8.2-gpu
+
+WORKDIR /tf
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        gdal-bin \
+        libgdal-dev \
+        python3-opencv && \
+    mkdir -p \
+        data/input/images \
+        data/input/checkpoint \
+        data/output && \
+    pip install --upgrade pip && \
+    pip install -r requirements.txt && \
+    apt-get clean -y && \
+    apt-get autoremove -y && \
+    rm -rf /var/lib/apt/lists/*
+
+COPY . .
+
+ENV RAMP_HOME=/tf
+
+CMD ["/tf/run_model.sh"]
