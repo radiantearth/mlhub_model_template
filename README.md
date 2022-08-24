@@ -7,7 +7,7 @@ named as the model id, without the version suffix.
 For example model id `model_unet_agri_western_cape_v1` would use:
 
 * Github repository name for publishing: `model_unet_agri_western_cape`, release to be tagged as `v1`.
-* Github repository name for internal development (if needed): `model_unet_agri_western_cape_dev`.
+* Github repository name for Radiant internal development (if needed): `model_unet_agri_western_cape_dev`.
 
 :warning: Remember: all text in all files this repo using `{{` mustache brackets `}}` should be
 edited, or the text yanked out.
@@ -121,14 +121,14 @@ this repo, this is only a placeholder to run the model locally for inferencing.
     has placeholder files and directory.
 
     * The `data/` folder must contain:
-        * `input/chips` {{ Maxar high resolution, Sentinel-2, etc. }} imagery chips for inferencing:
+        * `input/chips` {{ Landsat, Maxar Open-Data 30cm, Sentinel-2, etc. }} imagery chips for inferencing:
             * File name: {{ `chip_id.tif` }} e.g. {{ `0fec2d30-882a-4d1d-a7af-89dac0198327.tif` }}
             * File Format: {{ GeoTIFF, 256x256 }}
             * Coordinate Reference System: {{ WGS84, EPSG:4326 }}
             * Bands: {{ 3 bands per file:
-                * Band 1 Block=256x10 Type=Byte, ColorInterp=Red
-                * Band 2 Block=256x10 Type=Byte, ColorInterp=Green
-                * Band 3 Block=256x10 Type=Byte, ColorInterp=Blue
+                * Band 1 Type=Byte, ColorInterp=Red
+                * Band 2 Type=Byte, ColorInterp=Green
+                * Band 3 Type=Byte, ColorInterp=Blue
                 }}
         * `/input/checkpoint` the model checkpoint {{ file | folder }}, `{{ checkpoint file or folder name }}`.
             Please note: the model checkpoint is included in this repository.
