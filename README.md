@@ -65,7 +65,7 @@ use the official Mac or Windows GitHub client to clone this repository.
 }}
 
 ```bash
-git clone https://github.com/radiantearth/{{repository_name}}.git
+git clone https://github.com/{{your_org_name}}/{{repository_name}}.git
 cd {{repository_name}}/
 ```
 
@@ -92,9 +92,9 @@ Pull pre-built image from Docker Hub (recommended):
 
 ```bash
 # cpu
-docker pull docker.io/radiantearth/{{repository_name}}:1
+docker pull docker.io/{{your_org_name}}/{{repository_name}}:1
 # optional, for NVIDIA gpu
-docker pull docker.io/radiantearth/{{repository_name}}:1-gpu
+docker pull docker.io/{{your_org_name}}/{{repository_name}}:1-gpu
 
 ```
 
@@ -102,9 +102,9 @@ Or build image from source:
 
 ```bash
 # cpu
-docker build -t radiantearth/{{repository_name}}:1 -f Dockerfile_cpu .
+docker build -t {{your_org_name}}/{{repository_name}}:1 -f Dockerfile_cpu .
 # for NVIDIA gpu
-docker build -t radiantearth/{{repository_name}}:1-gpu -f Dockerfile_gpu .
+docker build -t {{your_org_name}}/{{repository_name}}:1-gpu -f Dockerfile_gpu .
 
 ```
 
