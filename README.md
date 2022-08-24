@@ -1,8 +1,8 @@
 {{
 
-:construction: This is a template git repository for a ml-model
-to be published on mlhub.earth. Create a repository using this template, named
-as the model id, without the version suffix. 
+:construction: This is a template git repository for a ml-model to be published
+on [mlhub.earth](https://mlhub.earth). Create a repository using this template,
+named as the model id, without the version suffix.
 
 For example model id `model_unet_agri_western_cape_v1` would use:
 
