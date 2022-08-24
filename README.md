@@ -147,9 +147,9 @@ this repo, this is only a placeholder to run the model locally for inferencing.
 3. Run the appropriate Docker Compose command for your system:
 
     ```bash
-    # no GPU
+    # cpu
     docker compose up {{stac.id}}_cpu
-    # NVIDIA GPU driver
+    # NVIDIA gpu driver
     docker compose up {{stac.id}}_gpu
     ```
 
