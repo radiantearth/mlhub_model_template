@@ -48,7 +48,9 @@ First clone this Git repository.
 
 {{
 
-(:pushpin: only include the LFS section if a file > 100MB had to be committed using LFS
+(:pushpin: only include the following LFS section if a file > 100MB had to be
+committed using LFS
+
 <https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github>)
 
 }}
@@ -67,10 +69,24 @@ git clone https://github.com/radiantearth/{{repository_name}}.git
 cd {{repository_name}}/
 ```
 
-After cloning the model repository, you can use the Docker Compose runtime files
-as described below.
+After cloning the model repository, you can use the Docker Compose runtime
+files as described below.
 
 ## Pull or Build the Docker Image
+
+{{
+
+:pushpin: model developers: please build and publish your images to [Docker
+Hub](https://hub.docker.com/). The images should be public, and should be
+tagged as `model_id:version` and `model_id:version-gpu`.
+
+For example model_id `model_unet_agri_western_cape_v1`
+would have two docker image tags published on Docker Hub:
+
+* `model_unet_agri_western_cape:1` for cpu inferencing
+* `model_unet_agri_western_cape:1-gpu` for gpu inferencing
+
+}}
 
 Pull pre-built image from Docker Hub (recommended):
 
@@ -93,6 +109,13 @@ docker build -t radiantearth/{{repository_name}}:1-gpu -f Dockerfile_gpu .
 ```
 
 ## Run Model to Generate New Inferences
+
+{{
+
+:pushpin: Model developers: do not commit training data to the data folder on
+this repo, this is only a placeholder to run the model locally for inferencing.
+
+}}
 
 1. Prepare your input and output data folders. The `data/` folder in this repository
     has placeholder files and directory.
