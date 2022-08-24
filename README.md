@@ -76,7 +76,7 @@ files as described below.
 
 {{
 
-:pushpin: model developers: please build and publish your images to [Docker
+:pushpin: Model developer: please build and publish your images to [Docker
 Hub](https://hub.docker.com/). The images should be public, and should be
 tagged as `model_id:version` and `model_id:version-gpu`.
 
@@ -112,7 +112,7 @@ docker build -t radiantearth/{{repository_name}}:1-gpu -f Dockerfile_gpu .
 
 {{
 
-:pushpin: Model developers: do not commit training data to the data folder on
+:pushpin: Model developer: do not commit training data to the data folder on
 this repo, this is only a placeholder to run the model locally for inferencing.
 
 }}
