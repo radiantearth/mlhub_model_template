@@ -15,9 +15,9 @@ services:
     runtime: nvidia
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
+      - INPUT_DATA=/tf/data/input
+      - OUTPUT_DATA=/tf/data/output
     volumes:
       - "${INPUT_DATA}:/tf/data/input"
       - "${OUTPUT_DATA}:/tf/data/output"
-    environment:
-      - INPUT_DATA=/tf/data/input
-      - OUTPUT_DATA=/tf/data/output
+
