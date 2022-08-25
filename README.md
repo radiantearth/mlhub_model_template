@@ -118,7 +118,7 @@ this repo, this is only a placeholder to run the model locally for inferencing.
 }}
 
 1. Prepare your input and output data folders. The `data/` folder in this repository
-    has placeholder files and directory.
+    contains some placeholder files to guide you.
 
     * The `data/` folder must contain:
         * `input/chips` {{ Landsat, Maxar Open-Data 30cm, Sentinel-2, etc. }} imagery chips for inferencing:
