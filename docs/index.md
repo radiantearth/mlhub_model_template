@@ -10,7 +10,7 @@ MLHub model id: `{{stac.id}}`. Browse on [Radiant MLHub](https://mlhub.earth/mod
 
 {{
 
-Include links to the STAC catalog for the training data that was used to train the model. There should be separate links for source and labels collections as the following example. Make sure to include `Source` and `Labels` in the corresponding names of each collection. 
+Include links to the STAC catalog for the training data that was used to train the model. There should be separate links for source and labels collections as the following example. Make sure to include `Source` and `Labels` in the corresponding names of each collection.
 
 - [Training Data Source](https://api.radiant.earth/mlhub/v1/collections/ref_african_crops_kenya_02_source)
 
@@ -125,20 +125,11 @@ The recommended start/end date of imagery for new inferencing. Example:
 The learning approach used to train the model. It is recommended that you use
 one of the values below, but other values are allowed.
 
-* Supervised
-* Unsupervised
-* Semi-supervised
-* Reinforcement-learning
-* Other (explain)
-
-Explain training steps such as augmentations and preprocessing used on image
-before training.
-
-A graphical representation of the model architecture within the documentation
-could be helpful to individuals or organizations who would wish to replicate
-workflow and reproduce same or even similar benchmark model results as well
-make specific changes within the architecture in an attempt to further improve
-it.
+- Supervised
+- Unsupervised
+- Semi-supervised
+- Reinforcement-learning
+- Other (explain)
 
 }}
 
@@ -149,11 +140,11 @@ it.
 The type of prediction that the model makes. It is recommended that you use one
 of the values below, but other values are allowed.
 
-* Object-detection
-* Classification
-* Segmentation
-* Regression
-* Other (explain)
+- Object-detection
+- Classification
+- Segmentation
+- Regression
+- Other (explain)
 
 }}
 
@@ -173,11 +164,11 @@ whenever possible. More details than just “it’s a CNN”!
 
 Identifies the operating system on which the model was trained.
 
-* Linux
-* Windows (win32)
-* Windows (cygwin)
-* MacOS (darwin)
-* Other (explain)
+- Linux
+- Windows (win32)
+- Windows (cygwin)
+- MacOS (darwin)
+- Other (explain)
 
 }}
 
@@ -187,8 +178,8 @@ Identifies the operating system on which the model was trained.
 
 The type of processor used during training. Must be one of "cpu" or "gpu".
 
-* cpu
-* gpu
+- cpu
+- gpu
 
 }}
 
@@ -197,7 +188,36 @@ The type of processor used during training. Must be one of "cpu" or "gpu".
 Review the [GitHub repository README](../README.md) to get started running
 this model for new inferencing.
 
-## Structure of Output Data
+## Methodology
+
+{{
+
+Use this section to provide more information to the reader about the model. Be
+as descriptive as possible. The suggested sub-sections are as following:
+
+}}
+
+### Training
+
+{{
+
+Explain training steps such as augmentations and preprocessing used on image
+before training.
+
+}}
+
+### Model
+
+{{
+
+Explain the model and why you chose the model in this section. A graphical representation
+of the model architecture could be helpful to individuals or organizations who would
+wish to replicate the workflow and reproduce the model results or to change the model
+architecture and improve the results.
+
+}}
+
+### Structure of Output Data
 
 {{
 
