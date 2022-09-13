@@ -131,15 +131,6 @@ one of the values below, but other values are allowed.
 * Reinforcement-learning
 * Other (explain)
 
-Explain training steps such as augmentations and preprocessing used on image
-before training.
-
-A graphical representation of the model architecture within the documentation
-could be helpful to individuals or organizations who would wish to replicate
-workflow and reproduce same or even similar benchmark model results as well
-make specific changes within the architecture in an attempt to further improve
-it.
-
 }}
 
 ## Prediction Type
@@ -197,7 +188,36 @@ The type of processor used during training. Must be one of "cpu" or "gpu".
 Review the [GitHub repository README](../README.md) to get started running
 this model for new inferencing.
 
-## Structure of Output Data
+## Methodology
+
+{{
+
+Use this section to provide more information to the reader about the model. Be
+as descriptive as possible. The suggested sub-sections are as following:
+
+}}
+
+### Training
+
+{{
+
+Explain training steps such as augmentations and preprocessing used on image
+before training.
+
+}}
+
+### Model
+
+{{
+
+Expalin the model and why you chose the model in this section. A graphical representation
+of the model architecture could be helpful to individuals or organizations who would 
+wish to replicate the workflow and reproduce the model results or to change the model 
+architecture and improve the results.  
+
+}}
+
+### Structure of Output Data
 
 {{
 
