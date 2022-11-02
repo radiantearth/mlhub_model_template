@@ -1,18 +1,37 @@
 {{
 
-:construction: This is a template git repository for a ml-model to be published
-on [mlhub.earth](https://mlhub.earth). Create a repository using this template,
-named as the model id, without the version suffix.
+A template repository for a ML model to be published on
+[Radiant MLHub](https://mlhub.earth/models).
 
-For example model id `model_unet_agri_western_cape_v1` would use:
+## Instructions for Model Contributors
 
-* Github repository name for publishing: `model_unet_agri_western_cape`, release to be tagged as `v1`.
-* Github repository name for Radiant internal development (if needed): `model_unet_agri_western_cape_dev`.
+### Focus on inferencing
 
-:warning: Remember: all text in all files this repo using `{{` mustache brackets `}}` should be
-edited, or the text yanked out.
+The intent of models published to MLHub is to provide a pre-trained model in a
+Docker image which can be used to perform inferencing (predictions) on new
+datasets. Model re-training, or other use cases, are not the primary goal.
+Therefore the model codes and model checkpoint you contribute here should have
+a simple flow of INPUT_DATA -> inferencing -> OUTPUT_DATA.
 
-:pushpin: stac references are in reference to the ml-model extension: <https://github.com/stac-extensions/ml-model>
+### Next Steps
+
+1. Contact ml@radiant.earth to discuss your model, get a `model_id`.
+
+2. Create a Git repository using this template, named as the model id, without
+the version suffix. For example model id `model_unet_agri_western_cape_v1`
+would use the repository name: `model_unet_agri_western_cape`. In a later step
+when the model is published we would use a Git tag named `v1`.
+
+3. :zap: Edit all the files in your new repository, and commit your model. Any file
+having `{{` mustache brackets `}}` should be manually edited, or if it does not
+apply, then the template text should be yanked out (like the current section).
+
+4. :pushpin: STAC refers to <https://stacspec.org> and the ml-model STAC extension:
+<https://github.com/stac-extensions/ml-model> . Radiant Earth will create the STAC item
+for you during ingest and publishing.
+
+5. Contact ml@radiant.earth with any questions. When you are ready to submit
+your model, send us a link to your model repository.
 
 }}
 
@@ -48,7 +67,7 @@ First clone this Git repository.
 
 {{
 
-(:pushpin: only include the following LFS section if a file > 100MB had to be
+:pushpin: only include the following LFS section if a file > 100MB had to be
 committed using LFS
 
 <https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github>)
@@ -61,6 +80,13 @@ Please note: this repository uses
 [Git Large File Support (LFS)](https://git-lfs.github.com/) to include the
 model checkpoint file. Either install `git lfs` support for your git client,
 use the official Mac or Windows GitHub client to clone this repository.
+
+}}
+
+{{
+
+:zap: Shell commands have been tested with Linux and MacOS but will
+differ on Windows, or depending on your environment.
 
 }}
 
@@ -103,7 +129,7 @@ Or build image from source:
 ```bash
 # cpu
 docker build -t {{your_org_name}}/{{repository_name}}:1 -f Dockerfile_cpu .
-# for NVIDIA gpu
+# optional, for NVIDIA gpu
 docker build -t {{your_org_name}}/{{repository_name}}:1-gpu -f Dockerfile_gpu .
 
 ```
@@ -144,12 +170,12 @@ this repo, this is only a placeholder to run the model locally for inferencing.
     export OUTPUT_DATA="/home/my_user/{{repository_name}}/data/output/"
     ```
 
-3. Run the appropriate Docker Compose command for your system:
+3. Run the appropriate Docker Compose command for your system
 
     ```bash
     # cpu
     docker compose up {{stac.id}}_cpu
-    # NVIDIA gpu driver
+    # optional, for NVIDIA gpu driver
     docker compose up {{stac.id}}_gpu
     ```
 
