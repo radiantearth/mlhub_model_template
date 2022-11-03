@@ -26,22 +26,22 @@ when the model is published we would use a Git tag named `v1`.
 having `{{` mustache brackets `}}` should be manually edited, or if it does not
 apply, then the template text should be removed (like the current section).
 
-4. :pushpin: STAC refers to <https://stacspec.org> and the ml-model STAC extension:
-<https://github.com/stac-extensions/ml-model> . Radiant Earth will create the STAC item
-for you during ingest and publishing.
-
-5. Contact ml@radiant.earth with any questions. When you are ready to submit
+4. Contact ml@radiant.earth with any questions. When you are ready to submit
 your model, send us a link to your model repository.
+
+5. Finally, Radiant Earth will create a [STAC](https://stacspec.org) catalog item using the
+[ml-model STAC extension](https://github.com/stac-extensions/ml-model), and then
+publish it to [MLHub](https://mlhub.earth/models).
 
 }}
 
-# {{ stac.properties.title }}
+# {{ Model Name (one line) }}
 
-{{ stac.properties.description }}
+{{ Model Description (paragraph) }}
 
-![{{stac.id}}](https://radiantmlhub.blob.core.windows.net/frontend-dataset-images/odk_sample_agricultural_dataset.png)
+![{{model_id}}](https://radiantmlhub.blob.core.windows.net/frontend-dataset-images/odk_sample_agricultural_dataset.png)
 
-MLHub model id: `{{stac.id}}`. Browse on [Radiant MLHub](https://mlhub.earth/model/{{stac.id}}).
+MLHub model id: `{{model_id}}`. Browse on [Radiant MLHub](https://mlhub.earth/model/{{model_id}}).
 
 ## ML Model Documentation
 
@@ -174,9 +174,9 @@ this repo, this is only a placeholder to run the model locally for inferencing.
 
     ```bash
     # cpu
-    docker compose up {{stac.id}}_cpu
+    docker compose up {{model_id}}_cpu
     # optional, for NVIDIA gpu driver
-    docker compose up {{stac.id}}_gpu
+    docker compose up {{model_id}}_gpu
     ```
 
 4. Wait for the `docker compose` to finish running, then inspect the
