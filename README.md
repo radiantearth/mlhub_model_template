@@ -24,7 +24,7 @@ when the model is published we would use a Git tag named `v1`.
 
 3. :zap: Edit all the files in your new repository, and commit your model. Any file
 having `{{` mustache brackets `}}` should be manually edited, or if it does not
-apply, then the template text should be yanked out (like the current section).
+apply, then the template text should be removed (like the current section).
 
 4. :pushpin: STAC refers to <https://stacspec.org> and the ml-model STAC extension:
 <https://github.com/stac-extensions/ml-model> . Radiant Earth will create the STAC item
