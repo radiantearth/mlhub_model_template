@@ -1,19 +1,23 @@
-# {{ stac.properties.title }}
+# {{ Model Name (one line) }}
 
-{{ stac.properties.description }}
+{{ Model Description (paragraph) }}
 
-![{{stac.id}}](https://radiantmlhub.blob.core.windows.net/frontend-dataset-images/odk_sample_agricultural_dataset.png)
+![{{model_id}}](https://radiantmlhub.blob.core.windows.net/frontend-dataset-images/odk_sample_agricultural_dataset.png)
 
-MLHub model id: `{{stac.id}}`. Browse on [Radiant MLHub](https://mlhub.earth/model/{{stac.id}}).
+MLHub model id: `{{model_id}}`. Browse on [Radiant MLHub](https://mlhub.earth/model/{{model_id}}).
 
 ## Training Data
 
 {{
 
-Include links to the STAC catalog for the training data that was used to train the model. There should be separate links for source and labels collections as the following example. Make sure to include `Source` and `Labels` in the corresponding names of each collection.
+Provide links to the training data for this model. There should be separate
+links for source and labels collections as the following example. Make sure to
+include `Source` and `Labels` in the corresponding names of each collection.
+
+
+Example using MLHub training data:
 
 - [Training Data Source](https://api.radiant.earth/mlhub/v1/collections/ref_african_crops_kenya_02_source)
-
 - [Training Data Labels](https://api.radiant.earth/mlhub/v1/collections/ref_african_crops_kenya_02_labels)
 
 }}
